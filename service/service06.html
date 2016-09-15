@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>誰でも遮断くんAMI｜オープンセキュリティプラットフォーム</title>
+<meta name="keywords" content="">
+<meta name="description" content="誰でもクラウド型WAFの導入・開発・第三者への販売が可能なオープンセキュリティプラットフォームです。ユーザーは開発費0円、システムの運用・保守のみでクラウド型WAFの提供が可能です。">
+<meta name="viewport" content="width=1155">
+<link rel="stylesheet" href="../css/style.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="js/accordion.js" type="text/javascript"></script>
+</head>
+<body id="servicePage06" class="servicePage">
+<!--header-->
+<header id="header">
+	<div class="inner">
+		<ul class="logo">
+        	<li><a href="/"><img src="../img/hd_logo01.png" alt="攻撃遮断くん"></a></li>
+			<li><a href="/"><img src="../img/hd_logo02.png" alt="攻撃見えるくん"></a></li>
+		</ul>
+        <ul class="menu">
+			<li><a href="/service/">サービス</a></li>
+            <li><a href="/plan/">料金プラン</a></li>
+            <li><a href="/case/">導入事例</a></li>
+            <li><a href="/news/">お知らせ</a></li>
+            <li><a href="/map/">攻撃の状況</a></li>
+			<li><a href="/statistics/">統計データ</a></li>
+		</ul>
+		<ul class="btns">
+			<li><a href="/signup/">無料登録</a></li>
+			<li><a href="/login/">ログイン</a></li>
+		</ul>
+	</div>
+</header>
+<!--//header-->
+
+
+<!--topic-path-->
+<div id="topic-path">
+	<ul class="cf">
+		<li><a href="/">TOP</a></li>
+		<li><a href="index.html">サービス一覧</a></li>
+		<li>誰でも遮断くんAMI</li>
+	</ul>
+</div>
+<!--//topic-path-->
+
+
+<!--page title-->
+<div id="pageTitle">
+	<div class="inner">
+        <div class="btn"><a href="/contact/">お問い合わせ</a></div>
+		<h1 class="title">誰でも遮断くんAMI</h1>
+		<div class="txt">
+			<p>誰でもクラウド型WAFの導入・開発・第三者への販売が可能なオープンセキュリティプラットフォームです。<br>
+                "誰でも遮断くんAMI"と攻撃遮断くん監視センター（シグネチャ）とを接続するために必要な<br>
+                認証キー（月額￥100,000）の取得により攻撃の検知遮断が開始します。<br>
+                ユーザーは開発費0円、システムの運用・保守のみでクラウド型WAFの提供が可能です。</p>
+		</div>
+	</div>
+</div>
+<!--//page title-->
+
+<!--section01-->
+<div id="section01" class="bg01">
+	<div class="inner">
+		<div class="img"><img src="img/service06_img01.png" width="995" height="721" alt=""></div>
+
+		<div class="tab_contents">
+			<ul class="tab">
+				<li>仕様</li>
+				<li>料金プラン</li>
+				<li>使い方</li>
+				<li>拠点</li>
+			</ul>
+
+			<div class="contents">
+
+				<div class="content cont01">
+					<h3 class="head">仕様</h3>
+					<div class="img f20" style="text-align:left;">
+                 		<!--仕様-->
+                        <p class="bold">誰でも遮断くんAMI概要</p>
+
+                        <table class="summary">
+                        <tr>
+                            <th>1. AMIの内容</th>
+                            <th>2. 詳細仕様</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                ・Amazon Linux<br>
+                                ・nginx （yumコマンドにてインストール）<br>
+                                ・誰でも遮断くん設定用対話型スクリプト<br>
+                                ・攻撃遮断くんエージェント<br>
+                                ・nginx用ログファイル取得設定済み
+                            </td>
+                            <td>
+                                ・OS／Linux version 3.14.26-24.46.amzn1.x86_64<br>
+                                ・スワップメモリ／領域確保なし<br>
+                                ・サーバー内時刻設定／UTC
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3. nginx</th>
+                            <th>4. 攻撃遮断くんエージェント</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                3-1.インストール済みパッケージ<br>
+                                nginx-1.6.2-1.22.amzn1.x86_64<br>
+                                <br>
+                                3-2.セットアップファイル<br>
+                                <br>
+                                /etc/nginx/nginx.conf<br>
+                                /etc/nginx/conf.d/default.conf<br>
+                                /etc/nginx/conf.d/default_ssl.conf<br>
+                                ※詳細な設定方法等はnginx公式マニュアル参照のこと<br>
+                                http://nginx.org/ja/docs/<br>
+                                <br>
+                                3-3.対話型セットアップスクリプト<br>
+                                日本語版：/home/nginx/nginx-setting-scripts/set-dns.sh<br>
+                                英語版：/home/nginx/nginx-setting-scripts/set-dns_en.sh<br>
+                                (関連ファイル) /home/nginx/nginx-setting-scripts/nginxsource.txt
+                            </td>
+                            <td>
+                                4-1.インストールファイルの場所<br>
+                                /opt/servertect-2.7<br>
+                                <br>
+                                4-2.インストール方法<br>
+                                Install.sh からの通常インストール<br>
+                                <br>
+                                4-3.動作検証状態<br>
+                                HTTP及びHTTPSにおける誰でも遮断くん動作、攻撃検出、<br>
+                                遮断・防御確認済み
+                            </td>
+                        </tr>
+                        </table>
+
+                        <p class="bold">■NGINX-Plus（有償版NGINX）を利用したPrivate版も別途用意がございます。</p>
+
+                        <table class="serviceTable">
+                        <tr>
+                            <th></th>
+                            <th>Private版 AMI</th>
+                            <th>通常版 AMI</th>
+                        </tr>
+                        <tr>
+                            <td class="label">Private版 AMI</td>
+                            <td>NGINX-Plus仕様のため、<br>ソフトウェア使用料金が必要</td>
+                            <td>ソフトウエア料金は不要</td>
+                        </tr>
+                        <tr>
+                            <td class="label">サポート</td>
+                            <td>ベンダー(Nginx)によるサポートあり	</td>
+                            <td>ベンダー(Nginx)によるサポートなし</td>
+                        </tr>
+                        <tr>
+                            <td class="label">nginx設定内容</td>
+                            <td>Nginxの開発担当がチューニング</td>
+                            <td>チューニングなし<br>コンフィグの設定内容は有償版と同一</td>
+                        </tr>
+                        </table>
+                        <!--//仕様-->
+                    </div>
+				</div>
+
+				<div class="content cont02">
+					<h3 class="head">料金プラン</h3>
+					<div class="txLeft">
+                    	<span class="f20"><span class="txGreen">■</span>料金プラン</span><br>
+                        <table class="plan">
+                        	<tr>
+                                <th>月額費用</th>
+                            </tr>
+                            <tr>
+                                <td>100,000円<span>（税抜）</span></td>
+                            </tr>
+                        </table>
+                        <p class="txLeft">※課金単位5000万リクエスト毎</p>
+                    </div>
+				</div>
+
+				<div class="content cont03">
+					<h3 class="head">使い方</h3>
+                	<div class="contents-area">
+                    <dl class="accordion">
+                        <dt class="trigger open-close">1. AMIから誰でも遮断くんを起動</dt>
+                        <dd class="accordion_tree">
+                        	<ul class="flow">
+                            <li>1. AWSマネジメントコンソールを開き、誰でも遮断くんを起動するリージョンに移動し「AMIs」を開きます。</li>
+                            <li>
+                            	2. 該当するAMIを検索します。<br>
+                                　 Filter: Public imagesを選択し、「AMI-ID」を検索します。（図は手順の参考例）<br>
+                                <p class="image"><img src="img/service06_img04.png" width="537" height="148" alt=""></p>
+                                ・AMI-ID<br>
+                                　Asia Pacific (Tokyo) ： <span class="red">ami-7cc7c97d</span><br>
+                                　Asia Pacific (Singapore) ： <span class="red">ami-16d0fb44</span><br>
+                                　Asia Pacific (Sydney) ： <span class="red">ami-cb1165f1</span><br>
+                                　EU (Frankfurt)： <span class="red">ami-34536329</span><br>
+                                　US East (N. Virginia)： <span class="red">ami-f2d0b29a</span><br>
+                                　US West (Oregon)： <span class="red">ami-ef90c0df</span><br>
+                                　South America (Sao Paulo)： <span class="red">ami-35ce7d28</span>
+                            </li>
+                            <li>
+                            	3. 表示されたAMIを選択し、「Launch」をクリックします。<br>
+							    　 <span class="red">AMI name: Daredemo_SyadanKun</span><br>
+                                <p class="image"><img src="img/service06_img05.png" width="538" height="266" alt=""></p>
+                            </li>
+                            <li>
+                            	4. その後、インスタンスタイプを選択し、EC2の設定を行います。<br>
+                                　 ※推奨インスタンスタイプ<br>
+                                　 <span class="red">c3.large以上</span><br>
+                            </li>
+                            <li>
+                                5. SecurityGroupの設定を行います。<br>
+                                　 ベンダー推奨設定＋攻撃遮断くん用設定を以下に記載します。<br>
+                                <br>
+                                &lt;Inbound&gt;<br>
+                                <p class="image"><img src="img/service06_img06.png" width="552" height="207" alt=""></p>
+                                ※1 必ず認証キー購入後に再設定をお願いいたします。<br>
+                                <br>
+                                &lt;Outbound&gt;<br>
+                                <p class="image"><img src="img/service06_img07.png" width="548" height="356" alt=""></p>
+                            </li>
+                            <li>
+                                6. 鍵の設定を行います。「Creat a new key pair」を選択し、鍵の名前を設定します。<br>
+                                　 その後、「Download Key Pair」をクリックすると秘密鍵をダウンロードできます。<br>
+                                　 鍵のダウンロードが終わったら「Launch instances」をクリックして誰でも遮断くんを起動させてください。<br>
+                                　 ※ここでダウンロードした鍵ファイルは2度とダウンロードすることはできなくなります。<br>
+                                　 誤って削除しないよう、ご注意ください。<br>
+                                <p class="image"><img src="img/service06_img08.png" width="580" height="377" alt=""></p>
+                            </li>
+                            </ul>
+                            <div class="b_box">
+                                <span class="blue">起動した誰でも遮断くんには、必ずEIPを設定してください。</span><br>
+                                ※UIPを設定しないと、攻撃遮断くんを設定することができません。<br>
+                                <br>
+                                <span class="bold">以上でAMIを使用した誰でも遮断くんの起動は完了です。</span>
+                            </div>
+                        </dd>
+                        <dt class="trigger open-close">2. nginxのセットアップ方法</dt>
+                        <dd class="accordion_tree">
+                            <ul class="anchorlink">
+                            	<li><a href="#how01">①ELB＋EC2複数台の場合</a></li>
+                            	<li><a href="#how02">②アプライアンス型LBがある場合</a></li>
+                            	<li><a href="#how03">③LBがない場合、または共用サーバを用いている場合</a></li>
+                            	<li><a href="#how04">④VirtualHostを使用している場合</a></li>
+                            </ul>
+                            <p id="how01" class="bold clear">①ELB＋EC2複数台の場合</p>
+                            <ul class="flow">
+                            	<li>1. 起動した誰でも遮断くんインスタンスにログインし、 root にスイッチします。</li>
+                                <li>
+                                    2. SSLを使用する場合（httpsを使用する場合）は、<span class="red">ELBに設置したものと同一の証明書、秘密鍵ファイルを<br>
+                                    　 以下のディレクトリに設置</span>します。<br>
+                                    　 ※nginxのコンフィグ内のデフォルトのディレクトリは以下の通りです。<br>
+                                    　 ※ファイル名は一例です<br>
+                                    　　 証明書：/etc/nginx/conf.d/ssl/hogehoge.com.crt<br>
+                                    　　 秘密鍵：/etc/nginx/conf.d/ssl/hogehoge.com.key
+                                </li>
+                                <li>
+                                    3. 以下のコマンドを実行し。対話型設定スクリプトを実行します。<br>
+                                    　 # cd /home/ec2-user/nginx/nginx-setting-scripts/<br>
+                                    　 # ./set-dns.sh
+                                </li>
+                                <li>
+                                    4. 「設定するプロトコルを選択してください。 1.HTTP, 2.HTTPS, 3.HTTP&amp;HTTPS」と表示されるので、<br>
+                                    　 使用するプロトコルの番号を入力し、Enterキーを押します。<br>
+                                    　 例)3 [Enter]
+                                </li>
+                                <li>
+                                    5. 「内部管理用ホスト名を入力してください。」と表示されるので、内部管理用のホスト名を記載し<br>
+                                    　 Enterキーを押します。<br>
+                                    　 ※nginxの設定ファイルなどに使用されますが、任意の名称を記載してください。<br>
+                                    　 例) hogehoge.com.host-001 [Enter]
+                                </li>
+                                <li>
+                                    6. 「IPアドレス、またはFQDNを入力してください。」と表示されるので、<span class="red">ELBのPublic DNS名</span>を入力し、<br>
+                                    　 Enterキーを押します。<br>
+                                    　 例) unknown-0000000000.ap-northeast-1.elb.amazonaws.com
+                                </li>
+                                <li>
+                                    7. 「転送対象のURLを入力してください。※http://やhttps://は省略してください。」と表示されるので、<br>
+                                    　 転送対象のURLを記入し、Enterを押します。<br>
+                                    　 例) www.hogehoge.com
+                                </li>
+                                <li>
+                                    8. (4)で 2または3を選択した場合、「証明書ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください 。」と表示されるので、(2)で設置した証明書ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書ファイル名の場合】hogehoge.com.crt
+                                </li>
+                                <li>
+                                    9. (4)で 2または3を選択した場合、「証明書鍵ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください。」と表示されるので、(2)で設置した証明書鍵ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書鍵ファイル名の場合】hogehoge.com.key
+                                </li>
+                                <li>
+                                    10.「nginx: the configuration file /etc/nginx/nginx.conf syntax is ok」 <br>
+                                    　　「nginx: configuration file /etc/nginx/nginx.conf test is successful」<br>
+                                    　　「エラーが発生していない場合、次のコマンドでNGINXの設定を再読み込みしてください。」<br>
+                                    　　と表示されることを確認する。<br>
+                                    　　※エラーが発生している場合は、nginxが表示したメッセージから修正対応を行う
+                                </li>
+                                <li>
+                                    11. Nginxの設定をリロードする<br>
+                                    　　# service nginx reload
+                                </li>
+                                <li>
+                                    12. IPアドレス、またはPublic DNSからアクセスし、正しくWEBページが表示されることを確認します。 <br>
+                                    　　問題なく表示されれば、nginxの設定は完了です。
+                                </li>
+                            </ul>
+                            <p id="how02" class="bold clear">②アプライアンス型LBがある場合</p>
+                            <ul class="flow">
+                            	<li>1. 起動した誰でも遮断くんインスタンスにログインし、 root にスイッチします。</li>
+                                <li>
+                                    2. SSLを使用する場合（httpsを使用する場合）は、<span class="red">転送先サーバーに設置したものと同一の証明書、<br>
+                                    　 秘密鍵ファイルを以下のディレクトリ</span>に設置します。<br>
+                                    　 ※nginxのコンフィグ内のデフォルトのディレクトリは以下の通りです。<br>
+                                    　 ※ファイル名は一例です<br>
+                                    　　 証明書：/etc/nginx/conf.d/ssl/hogehoge.com.crt<br>
+                                    　　 秘密鍵：/etc/nginx/conf.d/ssl/hogehoge.com.key
+                                </li>
+                                <li>
+                                    3. 以下のコマンドを実行し。対話型設定スクリプトを実行します。<br>
+                                    　 # cd /home/ec2-user/nginx/nginx-setting-scripts/<br>
+                                    　 # ./set-dns.sh
+                                </li>
+                                <li>
+                                    4. 「設定するプロトコルを選択してください。 1.HTTP, 2.HTTPS, 3.HTTP&amp;HTTPS」と表示されるので、<br>
+                                    　 使用するプロトコルの番号を入力し、Enterキーを押します。<br>
+                                    　 例)3 [Enter]
+                                </li>
+                                <li>
+                                    5. 「内部管理用ホスト名を入力してください。」と表示されるので、内部管理用のホスト名を記載し<br>
+                                    　 Enterキーを押します。<br>
+                                    　 ※nginxの設定ファイルなどに使用されますが、任意の名称を記載してください。<br>
+                                    　 例) hogehoge.com.host-001 [Enter]
+                                </li>
+                                <li>
+                                    6. 「IPアドレス、またはFQDNを入力してください。」と表示されるので、<span class="red">ロードバランサーのIPアドレス、<br>
+                                    　 またはFQDN</span>を入力し、Enterキーを押します。<br>
+                                    　 例) 123.45.67.xxx
+                                </li>
+                                <li>
+                                    7. 「転送対象のURLを入力してください。※http://やhttps://は省略してください。」と表示されるので、<br>
+                                    　 転送対象のURLを記入し、Enterを押します。<br>
+                                    　 例) www.hogehoge.com
+                                </li>
+                                <li>
+                                    8. (4)で 2または3を選択した場合、「証明書ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください 。」と表示されるので、(2)で設置した証明書ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書ファイル名の場合】hogehoge.com.crt
+                                </li>
+                                <li>
+                                    9. (4)で 2または3を選択した場合、「証明書鍵ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください。」と表示されるので、(2)で設置した証明書鍵ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書鍵ファイル名の場合】hogehoge.com.key
+                                </li>
+                                <li>
+                                    10.「nginx: the configuration file /etc/nginx/nginx.conf syntax is ok」 <br>
+                                    　　「nginx: configuration file /etc/nginx/nginx.conf test is successful」<br>
+                                    　　「エラーが発生していない場合、次のコマンドでNGINXの設定を再読み込みしてください。」<br>
+                                    　　と表示されることを確認する。<br>
+                                    　　※エラーが発生している場合は、nginxが表示したメッセージから修正対応を行う
+                                </li>
+                                <li>
+                                    11. Nginxの設定をリロードする。<br>
+                                    　　# service nginx reload
+                                </li>
+                                <li>
+                                    12. IPアドレス、またはPublic DNSからアクセスし、正しくWEBページが表示されることを確認します。 <br>
+                                    　　問題なく表示されれば、nginxの設定は完了です。
+                                </li>
+                            </ul>
+                            <p id="how03" class="bold clear">③LBがない場合、または共用サーバを用いている場合</p>
+                            <ul class="flow">
+                            	<li>1. 起動した誰でも遮断くんインスタンスにログインし、 root にスイッチします。</li>
+                                <li>
+                                    2. SSLを使用する場合（httpsを使用する場合）は、<span class="red">転送先サーバーに設置したものと<br>
+                                    　 同一の証明書、秘密鍵ファイルを以下のディレクトリに設置</span>します。<br>
+                                    　 ※nginxのコンフィグ内のデフォルトのディレクトリは以下の通りです。<br>
+                                    　 ※ファイル名は一例です<br>
+                                    　　 証明書：/etc/nginx/conf.d/ssl/hogehoge.com.crt<br>
+                                    　　 秘密鍵：/etc/nginx/conf.d/ssl/hogehoge.com.key
+                                </li>
+                                <li>
+                                    3. 以下のコマンドを実行し。対話型設定スクリプトを実行します。<br>
+                                    　 # cd /home/ec2-user/nginx/nginx-setting-scripts/<br>
+                                    　 # ./set-dns.sh
+                                </li>
+                                <li>
+                                    4. 「設定するプロトコルを選択してください。 1.HTTP, 2.HTTPS, 3.HTTP&amp;HTTPS」と表示されるので、<br>
+                                    　 使用するプロトコルの番号を入力し、Enterキーを押します。<br>
+                                    　 例)3 [Enter]
+                                </li>
+                                <li>
+                                    5. 「内部管理用ホスト名を入力してください。」と表示されるので、内部管理用のホスト名を記載し<br>
+                                    　 Enterキーを押します。<br>
+                                    　 ※nginxの設定ファイルなどに使用されますが、任意の名称を記載してください。<br>
+                                    　 例) hogehoge.com.host-001 [Enter]
+                                </li>
+                                <li>
+                                    6. 「IPアドレス、またはFQDNを入力してください。」と表示されるので、<span class="red">ELBのPublic DNS名</span>を入力し、<br>
+                                    　 Enterキーを押します。<br>
+                                    　 例) unknown-0000000000.ap-northeast-1.elb.amazonaws.com
+                                </li>
+                                <li>
+                                    7. 「転送対象のURLを入力してください。※http://やhttps://は省略してください。」と表示されるので、<br>
+                                    　 転送対象のURLを記入し、Enterを押します。<br>
+                                    　 例) www.hogehoge.com
+                                </li>
+                                <li>
+                                    8. (4)で 2または3を選択した場合、「証明書ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください 。」と表示されるので、(2)で設置した証明書ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書ファイル名の場合】hogehoge.com.crt
+                                </li>
+                                <li>
+                                    9. (4)で 2または3を選択した場合、「証明書鍵ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください。」と表示されるので、(2)で設置した証明書鍵ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書鍵ファイル名の場合】hogehoge.com.key
+                                </li>
+                                <li>
+                                    10.「nginx: the configuration file /etc/nginx/nginx.conf syntax is ok」 <br>
+                                    　　「nginx: configuration file /etc/nginx/nginx.conf test is successful」<br>
+                                    　　「エラーが発生していない場合、次のコマンドでNGINXの設定を再読み込みしてください。」<br>
+                                    　　と表示されることを確認する。<br>
+                                    　　※エラーが発生している場合は、nginxが表示したメッセージから修正対応を行う
+                                </li>
+                                <li>
+                                    11. 転送先WEBサーバーが複数台ある場合は、以下の対応を行います。<br>
+                                    　　# vi /etc/nginx/conf.d/default.conf<br>
+                                        <p class="g_box">
+                                            upstream backend.hostname {<br>
+                                            server xxx.xxx.xxx.xxx:80;<br>
+                                            server yyy.yyy.yyy.yyy:80; } ← upstream backend. hostname内にserverの設定を追加<br>
+                                            ※hostnameは(5)で設定した管理用ホスト名
+                                        </p>
+                                    　　※SSLを使用する場合は以下の対応も実施<br>
+                                    　　# vi /etc/nginx/conf.d/default_ssl.conf<br>
+                                        <p class="g_box">
+                                            upstream backend.hostname ssl{<br>
+                                            server xxx.xxx.xxx.xxx:80;<br>
+                                            server yyy.yyy.yyy.yyy:80; } ← upstream backend. hostname ssl内にserverの設定を追加<br>
+                                            ※hostnameは(5)で設定した管理用ホスト名
+                                        </p>
+                                </li>
+                                <li>
+                                    12. Nginxの設定をリロードする。 <br>
+                                    　　# service nginx reload
+                                </li>
+                                <li>
+                                    13. IPアドレス、またはPublic DNSからアクセスし、正しくWEBページが表示されることを確認します。 <br>
+                                    　　問題なく表示されれば、nginxの設定は完了です。
+                                </li>
+                            </ul>
+                            <p id="how04" class="bold clear">④VirtualHostを使用している場合</p>
+                            <p>※nginxの設定方法に関する内容となるため、あくまで参考レベルとする</p>
+                            <ul class="flow">
+                            	<li>1. 起動した誰でも遮断くんインスタンスにログインし、 root にスイッチします。</li>
+                                <li>
+                                    2. SSLを使用する場合（httpsを使用する場合）は、ELBに設置したものと同一の証明書、<br>
+                                    　 秘密鍵ファイルを以下のディレクトリに設置します。<br>
+                                    　 ※nginxのコンフィグ内のデフォルトのディレクトリは以下の通りです。<br>
+                                    　 ※ファイル名は一例です<br>
+                                    　　 証明書：/etc/nginx/conf.d/ssl/hogehoge.com.crt<br>
+                                    　　 秘密鍵：/etc/nginx/conf.d/ssl/hogehoge.com.key
+                                </li>
+                                <li>
+                                    3. 以下のコマンドを実行し。対話型設定スクリプトを実行します。<br>
+                                    　 # cd /home/ec2-user/nginx/nginx-setting-scripts/<br>
+                                    　 # ./set-dns.sh
+                                </li>
+                                <li>
+                                    4. 「設定するプロトコルを選択してください。 1.HTTP, 2.HTTPS, 3.HTTP&amp;HTTPS」と表示されるので、<br>
+                                    　 使用するプロトコルの番号を入力し、Enterキーを押します。<br>
+                                    　 例)3 [Enter]
+                                </li>
+                                <li>
+                                    5. 「内部管理用ホスト名を入力してください。」と表示されるので、内部管理用のホスト名を記載し<br>
+                                    　 Enterキーを押します。<br>
+                                    　 ※nginxの設定ファイルなどに使用されますが、任意の名称を記載してください。<br>
+                                    　 例) hogehoge.com.host-001 [Enter]
+                                </li>
+                                <li>
+                                    6. 「IPアドレス、またはFQDNを入力してください。」と表示されるので、ELBのPublic DNS名、<br>
+                                    　 またはロードバランサー、転送先サーバーのIPアドレスまたはFQDNを入力し、Enterキーを押します。<br>
+                                    　 例) unknown-0000000000.ap-northeast-1.elb.amazonaws.com
+                                </li>
+                                <li>
+                                    7. 「転送対象のURLを入力してください。※http://やhttps://は省略してください。」と表示されるので、<br>
+                                    　 転送対象のURLを記入し、Enterを押します。<br>
+                                    　 例) www.hogehoge.com
+                                </li>
+                                <li>
+                                    8. (4)で 2または3を選択した場合、「証明書ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください 。」と表示されるので、(2)で設置した証明書ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書ファイル名の場合】hogehoge.com.crt
+                                </li>
+                                <li>
+                                    9. (4)で 2または3を選択した場合、「証明書鍵ファイル名を入力してください。<br>
+                                    　 ※拡張子も含めて入力してください。」と表示されるので、(2)で設置した証明書鍵ファイル名を入力し、<br>
+                                    　 Enterを押します。<br>
+                                    　 例) 【(2)で記載した証明書鍵ファイル名の場合】hogehoge.com.key
+                                </li>
+                                <li>
+                                    10.「nginx: the configuration file /etc/nginx/nginx.conf syntax is ok」 <br>
+                                    　　「nginx: configuration file /etc/nginx/nginx.conf test is successful」<br>
+                                    　　「エラーが発生していない場合、次のコマンドでNGINXの設定を再読み込みしてください。」<br>
+                                    　　と表示されることを確認する。<br>
+                                    　　※エラーが発生している場合は、nginxが表示したメッセージから修正対応を行う
+                                </li>
+                                <li>
+                                    11. Nginxの設定をリロードする<br>
+                                    　　# service nginx reload
+                                </li>
+                                <li>
+                                    12. Virualhostの設定を行うため、再度(2)の手順から実施します。<br>
+                                    　　※(6)のIPアドレス、FQDNは同じ設定で(7)の転送先URLが異なる設定となる。
+                                </li>
+                                <li>
+                                    13. IPアドレス、またはPublic DNSからアクセスし、正しくWEBページが表示されることを確認します。 <br>
+                                    　　問題なく表示されれば、nginxの設定は完了です。
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt class="trigger open-close">3. 攻撃遮断くんの認証キーセットアップ方法</dt>
+                        <dd class="accordion_tree">
+                            <p>認証キー購入後に、セットアップ方法をお知らせします。</p>
+                        </dd>
+                        <dt class="trigger open-close">4. DNS情報の変更</dt>
+                        <dd class="accordion_tree">
+                            <p>
+                            1. ご利用のDNSサービスにて、対象WEBサイトのURLへ設定を行います。<br>
+                            　 A record (誰でも遮断くんのIPアドレス)、または C record (誰でも遮断くんのホスト名) を用い、<br>
+                            　 今回作成した誰でも遮断くんへ転送されるようレコード設定を行ってください。<br>
+                               <br>
+                            2. DNS情報が反映され次第、URLにアクセスし接続状態を確認します。<br>
+                            　 問題がなければ、誰でも遮断くんＡＭＩを利用した、クラウド型ＷＡＦのセットアップは完了です。
+                            </p>
+                        </dd>
+                        <dt class="trigger open-close">5. ご利用マニュアル</dt>
+                        <dd class="accordion_tree">
+                            <ul class="anchorlink">
+                            	<li><a href="pdf/ami_manual.pdf" target="_blank">マニュアルダウンロード</a></li>
+                             </ul>
+                             <br clear="all">
+                        </dd>
+                    </dl>
+					</div>
+				</div>
+
+				<div class="content cont04">
+					<h3 class="head">拠点</h3>
+					<div class="txLeft">
+                        <img src="img/service06_img03.png" width="620" height="1267" alt="">
+                    </div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--//section01-->
+
+<!--footer-->
+<footer id="footer">
+	<div class="inner">
+		<dl class="ft_info">
+			<dt>お知らせ</dt>
+			<dd><ul>
+				<li><span class="date">2016.08.30</span><a href="/news/datail20160830.html" class="txt">API提供を開始しました</a></li>
+				<li><span class="date">2016.08.22</span><a href="/news/datail20160822.html" class="txt">FQDN無制限プランに高トラフィックプランを追加しました</a></li>
+				<li><span class="date">2016.08.04</span><a href="/news/datail20160804.html" class="txt">DDoSセキュリティタイプの提供を開始しました</a></li>
+				<li><span class="date">2016.07.05</span><a href="/news/datail20160705.html" class="txt">ワンクリックレポートを実装しました</a></li>
+			</ul></dd>
+		</dl>
+
+		<div class="ft_menu cf">
+			<ul>
+				<li><a href="https://www.cscloud.co.jp/about_us/" target="_blank">会社情報</a></li>
+				<li><a href="/privacy/">個人情報保護方針</a></li>
+				<li><a href="/news/">お知らせ</a></li>
+				<li><a href="https://csc-service.jp/blog/" target="_blank">セキュリティブログ</a></li>
+			</ul>
+			<ul>
+				<li><a href="/about/">攻撃遮断くんとは</a></li>
+				<li><a href="/service/">サービス一覧</a></li>
+				<li><a href="/plan/">料金プラン</a></li>
+				<li><a href="/development/">開発チーム</a></li>
+				<li><a href="/case/">導入事例</a></li>
+			</ul>
+			<ul>
+				<li><a href="/document-form/">資料請求</a></li>
+				<li><a href="/contact/">お問い合わせ</a></li>
+				<li><a href="/signup/">無料登録</a></li>
+				<li><a href="/seminar/">セミナー</a></li>
+			</ul>
+			<ul>
+				<li><a href="/api/">API提供について</a></li>
+				<li><a href="/partner/">販売パートナー募集</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">Copyright<span>&copy;</span> Cyber Security Cloud , Inc. All Rights Reserved.</div>
+</footer>
+<!--//footer-->
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>
+$(function() {
+	$('.tab li:nth-child(1)').addClass('current');
+	$('.tab li').hover(function() {
+		var num = $(this).parent().children('li').index(this);
+		$(this).parent('.tab').each(function(){
+			$('>li',this).removeClass('current').eq(num).addClass('current');
+		});
+		$(this).parent().next().children('.content').hide().eq(num).show();
+	}).first().hover();
+});
+</script>
+
+
+<!-- Google Tag Manager -->
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-NRQB46' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NRQB46');
+</script>
+<!-- End Google Tag Manager -->
+
+</body>
+</html>

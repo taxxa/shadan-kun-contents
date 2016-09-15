@@ -1,0 +1,19 @@
+$(document).ready(function(){
+  //accordion_treeを一旦非表示に
+  $(".accordion_tree").css("display","none");
+  //triggerをクリックすると以下を実行
+  $(".trigger").click(function(){
+    //もしもクリックしたtriggerの直後の.accordion_treeが非表示なら
+    if($("+.accordion_tree",this).css("display")=="none"){
+         //classにactiveを追加
+         $(this).addClass("active");
+         //直後のaccordion_treeをスライドダウン
+         $("+.accordion_tree",this).slideDown("normal");
+  }else{
+    //classからactiveを削除
+    $(this).removeClass("active");
+    //クリックしたtriggerの直後の.accordion_treeが表示されていればスライドアップ
+    $("+.accordion_tree",this).slideUp("normal");
+  }
+  });
+});

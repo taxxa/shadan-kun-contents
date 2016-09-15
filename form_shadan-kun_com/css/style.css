@@ -1,0 +1,498 @@
+@charset "UTF-8";
+/* --------------------------------
+ * reset
+ * -------------------------------- */
+
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+body {
+	line-height:1;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	display:block;
+}
+
+ul, ol {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	color:#2c2c2c;
+}
+
+ins {
+	background-color:#ffffff;
+	color:#000;
+	text-decoration:none;
+}
+
+mark {
+	background-color:#fff;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #cccccc;
+	margin:1em 0;
+	padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+img {vertical-align: bottom;}
+html{background-color:#ffffff;}
+
+/* --------------------------------
+ * 余白
+ * -------------------------------- */
+ 
+ .mT5{margin-top:5px!important;}
+ .mT50{margin-top:50px!important;}
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+  background-color:#f2f2f2;
+}
+body {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: Meiryo,  "Hiragino Kaku Gothic ProN",  sans-serif;
+  background-color:#f2f2f2;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited {
+  color: #d03c56;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #d03c56;
+  text-decoration:underline;
+}
+.btns a:hover, .btns a:active, .btn a:hover, .btn a:active {
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.center{ text-align:center;}
+
+#pageTitle{
+    height: 200px;
+    overflow: hidden;
+}
+
+
+/* --------------------------------
+ * parts
+ * -------------------------------- */
+.cf::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.inner {
+	width:1155px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	overflow:hidden;
+	/*border:1px solid;*/
+}
+
+
+/* --------------------------------
+ * header部品
+ * -------------------------------- */
+#header {
+	background : #192226;
+}
+#header .inner {
+	height:90px;
+}
+
+#header .logo {
+	position:absolute;
+	left:24px;
+	top:24px;
+	overflow:hidden;
+}
+#header .logo li {
+	float:left;
+	padding-right:8px;
+}
+#header .menu {
+	position:absolute;
+	right:274px;
+	top:38px;
+	overflow:hidden;
+}
+#header .menu li {
+	float:left;
+	font-size:12px;
+	line-height:1.2;
+	padding-left:12px;
+}
+#header .btns {
+	position:absolute;
+	right:26px;
+	top:29px;
+	overflow:hidden;
+}
+#header .btns li {
+	float:left;
+}
+#header .btns li a {
+	width:104px;
+	height:32px;
+	display:block;
+	font-size:13px;
+	line-height:32px;
+	text-align:center;
+	border-radius : 5px;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
+}
+#header .btns li:nth-child(1) a {
+	background : #FF7F15;
+	margin-right:10px;
+}
+#header .btns li:nth-child(2) a {
+	background : #0A8096;
+}
+
+#header a:link,#header a:visited {
+  color: #FFFFFF!important;
+  text-decoration: none!important;
+}
+/* --------------------------------
+ * footer
+ * -------------------------------- */
+#footer {
+	background : #192226;
+	font-size:13px;
+}
+#footer a {
+	color:#fff;
+}
+#footer .inner {
+	overflow:hidden;
+}
+#footer .ft_info {
+	width:370px;
+	float:left;
+	margin-left:52px;
+	padding-top:40px;
+}
+#footer .ft_info li {
+	padding:12px 10px 7px;
+	border-bottom:1px dotted #fff;
+	width:370px;
+	box-sizing:border-box;
+	display:table;
+}
+#footer .ft_info dt {
+	font-weight:bold;
+	border-bottom:1px dotted #fff;
+	padding-left:5px;
+	padding-bottom:5px;
+}
+#footer .ft_info .date {
+	width:84px;
+	display:table-cell;
+}
+#footer .ft_info .txt {
+	display:table-cell;
+}
+#footer .ft_menu {
+	float:right;
+	padding-top:55px;
+	padding-right:58px;
+}
+#footer .ft_menu li {
+	margin-bottom:10px;
+}
+#footer .ft_menu ul:nth-child(1) {
+	width:160px;
+	float:left;
+	padding-right:10px;
+}
+#footer .ft_menu ul:nth-child(2) {
+	width:136px;
+	float:left;
+	padding-right:10px;
+}
+#footer .ft_menu ul:nth-child(3) {
+	width:130px;
+	float:left;
+	padding-right:10px;
+}
+#footer .ft_menu ul:nth-child(4) {
+	float:left;
+}
+#footer .copyright {
+	width:1155px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:55px;
+	padding-left:132px;
+	box-sizing:border-box;
+	line-height:54px;
+	background-image:url(../img/ft_logo.png);
+	background-position:51px 0;
+	background-repeat:no-repeat;
+}
+#footer .copyright span {
+	font-size:150%;
+	vertical-align:bottom;
+	display:inline-block;
+}
+
+
+.sectionTitle01 {
+	font-weight:bold;
+	font-size:20px;
+	text-align:center;
+}
+.sectionTitle02 {
+	font-weight:normal;
+	font-size:17px;
+}
+.mt10 {
+	margin-top:10px;
+}
+
+
+
+/*パン屑リンク*/
+#topic-path {
+	background-color:#7f7f7f;
+}
+#topic-path a {
+	color:#fff;
+}
+#topic-path ul {
+	width:1049px;
+	height:24px;
+	line-height:24px;
+	font-size:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#topic-path li {
+	float:left;
+}
+#topic-path li:before {
+	content:"> ";
+	margin-left:0.5em;
+}
+#topic-path li:first-child:before {
+	content:"";
+}
+
+
+
+/*pageTitle*/
+#pageTitle .inner {
+	width:1030px;
+	margin-left:auto;
+	margin-right:auto;
+	color:#000;
+	padding-bottom:40px;
+}
+#pageTitle .title {
+	font-size : 30px;
+	margin-top:40px;
+}
+#pageTitle p {
+	font-size : 17px;/*12px*/
+	line-height:20px;
+	margin-top:30px;
+	margin-left:0;
+}
+#pageTitle .notice {
+	font-size : 12px;/*10px*/
+	margin-top:5px;
+	margin-left:0;
+}
+#pageTitle .inner a {
+	color:#000;
+}
+
+
+
+/*資料ダウンロード*/
+/*pageTitle*/
+#formPage #pageTitle .inner {
+	height:185px;
+}
+#formPage #section01 {
+	padding-top:110px;
+	padding-bottom:76px;
+	background-color:#2c363c;
+}
+#formPage #section01 .inner {
+	width:962px;
+}
+#formPage #section01 th {
+	font-size:14px;
+	padding:20px 20px 20px 80px;
+	width:238px;
+	box-sizing:border-box;
+	text-align:left;
+	position:relative;
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	border-bottom:1px solid #fff;
+	background-color:#2c363c;
+	vertical-align:top;
+}
+#formPage #section01 th.required:before {
+	content:"＊";
+	font-size:17px;
+	position:absolute;
+	left:55px;
+	top:20px;
+}
+#formPage #section01 td {
+	border-top:1px solid #ababab;
+	border-left:1px solid #ababab;
+	border-bottom:1px solid #ababab;
+	padding:7px 20px 7px 29px;
+	background-color:#fff;
+	color:#000;
+}
+#formPage #section01 td a {
+	color:red;
+}
+#formPage #section01 td input {
+	vertical-align:-0.1em;
+	margin-right:0.5em;
+}
+#formPage input[type=text],
+#formPage textarea {
+	padding: 0.8em;
+	outline: none;
+	border: 1px solid #c4c4c4;
+	font-size: 14px;
+	width:665px;
+	box-sizing:border-box;
+	border-radius : 6px;
+	-moz-border-radius : 6px;
+	-webkit-border-radius : 6px;
+}
+/* フォーカスした時のスタイルを変更
+*****************************************/
+#formPage input[type=text]:focus {
+	box-shadow: 0 0 7px #3498db;
+	border: 1px solid #3498db;
+}
+
+.submit {
+	text-align:center;
+}
+.submit-btn {
+	width:313px;
+	height:43px;
+	margin-top:70px;
+	text-align:center;
+	line-height:43px;
+	border-radius : 6px;
+	-moz-border-radius : 6px;
+	-webkit-border-radius : 6px;
+	font-size:17px;
+	color:#fff;
+	background-color:#ff7f15;
+	border:none;
+	cursor:pointer;
+}
+.submit-btn:hover {
+	opacity:0.8;
+}
+
+
+
+
+/*pageTitle*/
+#thanksPage #pageTitle .inner {
+	width:1030px;
+	margin-left:auto;
+	margin-right:auto;
+	color:#000;
+}
+#thanksPage #section01 .inner {
+	width:1030px;
+	font-size : 17px;/*12px*/
+	line-height:20px;
+	margin:30px auto 250px;
+	color:#000;
+}
